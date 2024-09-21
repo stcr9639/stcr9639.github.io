@@ -1,0 +1,19 @@
+Stella Cross
+ATLS 2200
+HTML Midterm
+22 Sunday 2024
+
+find_errors - 
+1. line 1; missing <!DOCTYPE html> at the beginning of the script
+2. line 4; <html language="en"> is within the header section, should be outside just under !docutype
+3. line 4; should be lang instead of language
+4. line 8; missing head closing bracket
+5. line 9; missing the closing </h1> tag
+6. ine 13; missing a starting <p> tag 
+7. line 13; list tag incorrect, should be <ul>
+8. line 21; beginning <li> tag has a misplaced backslash </li> should be <li>
+9. line 28; missing a closing paragraph text, add </p>
+10. line 30; incorect file name to call image should be "image.jpg"
+11. line 30; missing alt tag in photo call
+12. line 32; incorrect closing bracket for a file reference, should be </a>
+13. line
