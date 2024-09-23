@@ -4,47 +4,47 @@ HTML Midterm
 22 Sunday 2024
 
 find_errors - 
-1. line 1; missing <!DOCTYPE html> at the beginning of the script
-2. line 4; <html language="en"> is within the header section, should be outside just under !docutype
-3. line 4; should be lang instead of language
-4. line 8; missing head closing bracket
-5. line 9; missing the closing </h1> tag
-6. ine 13; missing a starting <p> tag 
-7. line 13; list tag incorrect, should be <ul>
-8. line 21; beginning <li> tag has a misplaced backslash </li> should be <li>
-9. line 28; missing a closing paragraph text, add </p>
-10. line 30; incorect file name to call image should be "image.jpg"
-11. line 30; missing alt tag in photo call
-12. line 32; incorrect closing bracket for a file reference, should be </a>
-13. line 41; missing closing backslash in table 
-14. line 47; missing closing table tag, add </table>
-15. line 48; should be src instead of source
-16. line 48; should be "error.jpg" not "error.jpeg"
-17. line 51; missing paragraph tags
-18. line 51; missing strike tag for strike through text
-19. line 54; should be style instead of bgcolor for a paragraph, add "color" before "lightgray"
-20. line 58; missing a closing tag to end the comment, add -->
-21. line 60; missing closing </a> tag
-22. line 62; </em> tag should be on the inside of the paragraph tags and should be <u> for underline instead 
-23. line 65; descriptive list title tag is <dt> not <li>
-24. line 66; descriptive list text tag is <dd> not <li>
-25. line 68; mismatched tags, <h3> should be </h2> instead 
+1. line 1; missing <!DOCTYPE html> at the beginning of the script// added tag
+2. line 4; <html language="en"> is within the header section, should be outside just under !docutype // put it on line 2 and added proper tag
+3. line 4; should be lang instead of language // changed language to lang
+4. line 9; missing head closing bracket // added brackets
+5. line 10; missing the closing </h1> tag // added </h1>
+6. ine 12; missing a starting <p> tag // added <p>
+7. line 14; list tag incorrect, should be <ul> // switched <ol> to <ul>
+8. line 20; beginning <li> tag has a misplaced backslash </li> should be <li> // switched </li> to <li>
+9. line 27; missing a closing paragraph text // added </p> 
+10. line 29; incorect file name to call image // changed to "image.jpg"
+11. line 20; missing alt tag in photo call // added alt with description
+12. line 31; incorrect closing bracket for a file reference // changed to be </a>
+13. line 40; missing closing backslash in table // added backslash
+14. line 46; missing closing table tag // added </table>
+15. line 47; should be src instead of source // changed source to src
+16. line 47; should be "error.jpg" not "error.jpeg" // changed jpeg to jpg
+17. line 50; missing paragraph tags // added <p> and </p>
+18. line 50; missing strike tag for strike through text // added <s> and </s>
+19. line 53; should be style instead of bgcolor for a paragraph, add "color" before "lightgray" // added bgcolor and "color"
+20. line 57; missing a closing tag to end the comment // added -->
+21. line 59; missing closing </a> tag // added </a>
+22. line 61; </em> tag should be on the inside of the paragraph tags and should be <u> for underline instead //changed to <u> and added </u>
+23. line 64; descriptive list title tag is <dt> not <li> // changed to <dt>
+24. line 65; descriptive list text tag is <dd> not <li> // changed to <dd>
+25. line 69; mismatched tags, <h3> should be </h2> instead // changed to </h2>
 
 
 
 find_errors_2 - 
-1. line 2; missing an html lang call
-2. line 5; cannot use header tags in the head section of the code
-3. line 6; missing a closing header tag
-4. line 8; missing a closing > on the body tag
-5. line 9; extra html call (should be up at line 2 instead)
-6. line 10; missing a closing div tag and should be surrounding the desired code
-7. line 11. missing a closing paragraph and strong tag on the text
-8. line 13; missing an alt tag in the image call
-9. line 13; should be src not href
-10. line 13; incorrect file name 
-11. line 15; missing an h2 opening tag 
-12. line 17; missing an opening paragraph tag 
-13. line 18; missing a closing comment bracket 
-14. line 19 missing a closing body tag 
-15. line 20; mispelled, should be html not htm
+1. line 2; missing an html lang call // added <html lang="en">
+2. line 5; cannot use header tags in the head section of the code // deleted line of code
+3. line 6; missing a closing header tag // added </head>
+4. line 8; missing a closing > on the body tag // added >
+5. line 9; extra html call (should be up at line 2 instead) // deleted code
+6. line 10; missing a closing div tag and should be surrounding the desired code // added </div>
+7. line 11. missing a closing paragraph and strong tag on the text // added </strong> and </p>
+8. line 13; missing an alt tag in the image call // added alt and description
+9. line 13; should be src not href // changed href to src
+10. line 13; incorrect file name // corrected file name to image_2.jpg
+11. line 15; missing an h2 opening tag // added <h2>
+12. line 17; missing an opening paragraph tag // added <p>
+13. line 18; missing a closing comment bracket // added -->
+14. line 19 missing a closing body tag // added </body>
+15. line 20; mispelled, should be html not htm // changed htm to html
