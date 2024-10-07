@@ -1,0 +1,11 @@
+/*General Style sheet for assignment 6*/
+  .image1 {
+    position: relative;
+    bottom: 120px;
+    left: 20px;
+  }
+  .image2 {
+    position: relative;
+    bottom: 120px;
+    right: -500px;
+  }
