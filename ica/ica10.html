@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <title>these are our notes for wk10</title>
+</head>
+<body>
+
+<div>
+    <h1 id="my_head">
+        Week 10 - Click Here!
+    </h1>
+    <p id="paragraph">Happy Halloween!</p>
+    <p>My favorite halloween movie is <span id="scarymovie"></span></p>
+</div>
+<div>
+    <img id="image" src="/img/jack-o-lantern.jpg">
+</div>
+</body> <!--src="../js/wk_10.js"-->
+<script>
+    let my_var = 100;
+    var my_other_var = "hello world";
+    const this_is_a_constant = "constant";
+    console.log(my_other_var);
+    my_other_var += "!";
+    // alert(my_other_var);
+
+    // how to interact with the DOM
+    console.log(document.getElementById("my_head"));
+    document.getElementById("my_head").addEventListener("click", function(e){
+        alert("clicked the h1");
+        document.getElementById("paragraph").innerHTML = "Happy Thanksgiving";
+        document.getElementById("paragraph").style.color = "orange";
+        document.getElementById("image").src = "/img/turkey.png";
+    })
+
+    console.log(document.getElementById("my_head").innerHTML);
+
+    first = prompt("Please enter your favorite scary movie");
+    document.getElementById('scarymovie').innerHTML = first;
+</script>
+</html>
