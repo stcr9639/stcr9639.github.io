@@ -11,8 +11,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="/final_project/style.css" />
-    <link rel="stylesheet" href="/final_project/responsive.css" />
+    <link rel="stylesheet" href="/final_project/style.css"/>
+    <link rel="stylesheet" href="/final_project/responsive.css"/>
   </head>
 
   <body>
@@ -32,7 +32,9 @@
               <a class="links" href="/final_project/main.html"> Home </a>
             </li>
             <li class="menu-list-items">
-              <a class="links" href="/final_project/portfolio.html"> Portfolio </a>
+              <a class="links" href="/final_project/portfolio.html">
+                Portfolio
+              </a>
             </li>
             <li class="menu-list-items">
               <a class="links" href="#about"> About </a>
@@ -45,29 +47,68 @@
       </nav>
     </header>
 
- <!-- Footer section -->
- <footer class="footer">
-    <div class="footer-content text-center">
-      <div class="social-links">
-        <div class="footer-menu">
-          <ul class="footer-menu-list">
-            <li class="footer-list-items">
-              <a class="footer-links" href="https://www.linkedin.com/in/stella-cross-843b14216/">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-          </ul>
+    <p><br><br><br><br></p>
+    <div class="headings"> <h1>Encylopedia Assignment</h1></div>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="/final_project/Images/cover.png" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="/final_project/Images/matlab_cover.png" style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="/final_project/Images/pilot_simulation.png" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+      
+
+    <!-- Footer section -->
+    <footer class="footer">
+      <div class="footer-content text-center">
+        <div class="social-links">
+          <div class="footer-menu">
+            <ul class="footer-menu-list">
+              <li class="footer-list-items">
+                <a
+                  class="footer-links"
+                  href="https://www.linkedin.com/in/stella-cross-843b14216/"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
-    integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script src="/final_project/script.js"></script>
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+      integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer">
+    </script>
+    <script src="/final_project/script.js"></script>
+  </body>
 </html>
