@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="projects">
+        <section class="filter-bar">
+            <button data-filter="html">HTML</button>
+            <button data-filter="css">CSS</button>
+            <button data-filter="js">JavaScript</button>
+        </section>
+        <section id="project-list">
+            <!-- Projects rendered dynamically here -->
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

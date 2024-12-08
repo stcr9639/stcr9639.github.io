@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Project 1",
+        "description": "A simple project using HTML and CSS.",
+        "technologies": ["HTML", "CSS"],
+        "images": ["assets/images/project1/img1.jpg", "assets/images/project1/img2.jpg"]
+    },
+    {
+        "id": 2,
+        "title": "Project 2",
+        "description": "An interactive project with JavaScript.",
+        "technologies": ["JavaScript", "HTML"],
+        "images": ["assets/images/project2/img1.jpg", "assets/images/project2/img2.jpg"]
+    },
+    {
+        "id": 3,
+        "title": "Project 3",
+        "description": "A full-stack project.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "images": ["assets/images/project3/img1.jpg", "assets/images/project3/img2.jpg"]
+    }
+]

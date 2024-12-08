@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+ 
+  <body>
+    <!-- Navbar header section -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <h2 class="logo-heading">Stella Cross</h2>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars hamburger-icon"></i>
+          <i class="fas fa-times cross-icon"></i>
+        </div>
+        <div class="menu">
+          <ul class="menu-list">
+            <li class="menu-list-items">
+              <a class="links" href="/final_project/main.html"> Home </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="/final_project/portfolio.html"> Portfolio </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="#about"> About </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="#contact"> Contact Me </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('unity')"> Unity</button>
+            <button class="btn" onclick="filterSelection('web')"> Web</button>
+            <button class="btn" onclick="filterSelection('matlab')"> MATLAB</button>
+          </div>
+         
+        <div class="portfolio-heading">
+          <h1 class="my-heading text-center">Portfolio</h1>
+        </div>
+        
+        <div class="portfolio-content">
+            <div class="container">
+          
+            <div class="my-row">
+
+            <div class="filterDiv web">
+            <div class="my-col">
+              <div class="my-card port-card">
+                <div class="image">
+                  <img src="./Images/web_cover.png" alt="Picture from the Encylopedia assignment of the Battle of Isla Cruces section" />
+                </div>
+                <h3 class="greet-heading blue-text">Encylopedia</h3>
+                <p class="small-para blue-text">Web Design</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="filterDiv unity">
+            <div class="my-col">
+              <div class="my-card port-card">
+                <div class="image">
+                  <img
+                    src="./Images/unity_cover.png" alt="Web Development Image"/>
+                </div>
+                <h3 class="greet-heading blue-text">Portal Simulations</h3>
+                <p class="small-para blue-text">Unity/C#</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="filterDiv matlab">
+            <div class="my-col">
+              <div class="my-card port-card matlab">
+                <div class="image">
+                  <img src="./Images/matlab_cover.png" alt="3D model of the orbit of the ISS station and the Hubble Telescope compared to Earth" />
+                </div>
+                <h3 class="greet-heading blue-text">Satellite Tracking</h3>
+                <p class="small-para blue-text">MATLAB</p>
+              </div>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+        </div>
+      </section>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="footer-content text-center">
+          <div class="social-links">
+            <div class="footer-menu">
+              <ul class="footer-menu-list">
+                <li class="footer-list-items">
+                  <a class="footer-links" href="https://www.linkedin.com/in/stella-cross-843b14216/">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+      integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+    </body>
+    
