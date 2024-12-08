@@ -359,6 +359,11 @@ body {
     display: block;
 }
   
+#myBtnContainer {
+    margin-top: 50px; /* Adds space above the buttons */
+    padding: 10px;    /* Adds space inside the container */
+}
+
 .btn:hover {
     background-color: #00b4d8;
 }
