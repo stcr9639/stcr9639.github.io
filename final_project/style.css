@@ -137,10 +137,10 @@ body {
 }
 
 .my-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures three items per row */
+    gap: 20px; /* Space between grid items */
+    align-items: start; /* Align items at the top */
 }
 
 .my-row .my-col {
@@ -346,17 +346,30 @@ body {
   
 .container {
     margin-top: 20px;
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
 }
   
 /* Style the buttons */
 
 .filterDiv {
-    display: none;
+    opacity: 0;
+    transform: scale(0.95); /* Slightly shrink items when hidden */
+    transition: all 0.3s ease-in-out; /* Smooth animation */
+    display: none; /* Hidden by default */
 }
 
 .filterDiv.show {
-    display: block;
+    opacity: 1;
+    transform: scale(1); /* Return to full size when visible */
+    display: block; /* Add items back to the grid */
+}
+
+.filterDiv.hide {
+    opacity: 0;
+    transform: scale(0.95); /* Shrink items smoothly */
+    display: none !important; /* Fully remove from grid after animation */
 }
   
 #myBtnContainer {

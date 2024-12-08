@@ -18,13 +18,25 @@ hamburger.addEventListener('click', function () {
 
 filterSelection("all")
 function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
+  const grid = document.querySelector('.my-row');
+    const elements = document.getElementsByClassName('filterDiv');
+    if (c === 'all') c = '';
+
+    Array.from(elements).forEach(element => {
+        if (element.className.indexOf(c) > -1) {
+            element.classList.add('show');
+            element.classList.remove('hide');
+        } else {
+            element.classList.add('hide');
+            element.classList.remove('show');
+        }
+    });
+
+    // Force layout refresh for smoother animations
+    grid.style.display = 'none';
+    setTimeout(() => {
+        grid.style.display = 'grid';
+    }, 0);
 }
 
 function w3AddClass(element, name) {
@@ -60,3 +72,4 @@ for (var i = 0; i < btns.length; i++) {
         this.className += " active";
     });
 }
+
