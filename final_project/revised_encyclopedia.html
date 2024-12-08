@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/final_project/style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo"><h2 class="logo-heading">Stella Cross</h2></div>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars hamburger-icon"></i>
+        <i class="fas fa-times cross-icon"></i>
+      </div>
+      <div class="menu">
+        <ul class="menu-list">
+          <li class="menu-list-items"><a class="links" href="/final_project/main.html">Home</a></li>
+          <li class="menu-list-items"><a class="links" href="/final_project/portfolio.html">Portfolio</a></li>
+          <li class="menu-list-items"><a class="links" href="#about">About</a></li>
+          <li class="menu-list-items"><a class="links" href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Encyclopedia Assignment</h1>
+
+    <!-- Slideshow Container -->
+    <div class="slideshow-container">
+      <!-- Full-width slides -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="/final_project/Images/cover.png" style="width:100%">
+        <div class="text">Caption One</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="/final_project/Images/matlab_cover.png" style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="/final_project/Images/pilot_simulation.png" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content text-center">
+      <div class="social-links">
+        <ul class="footer-menu-list">
+          <li class="footer-list-items">
+            <a class="footer-links" href="https://www.linkedin.com/in/stella-cross-843b14216/">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" 
+          integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/final_project/updated_script.js"></script>
+</body>
+</html>
