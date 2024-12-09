@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/final_project/CSS/style.css"/>
+    <link rel="stylesheet" href="/final_project/CSS/responsive.css"/>
+    <link rel="stylesheet" href="/final_project/CSS/filter.css"/>
+  </head>
+ 
+  <body>
+    <!-- Navbar header section -->
+    <header class="headings">
+      <nav class="navbar">
+        <div class="logo">
+          <h2 class="logo-heading">Stella Cross</h2>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars hamburger-icon"></i>
+          <i class="fas fa-times cross-icon"></i>
+        </div>
+        <div class="menu">
+          <ul class="menu-list">
+            <li class="menu-list-items">
+              <a class="links" href="/final_project/HTML/main.html"> Home </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="/final_project/HTML/portfolio.html"> Portfolio </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="#about"> About </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="#contact"> Contact Me </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('unity')"> Unity</button>
+            <button class="btn" onclick="filterSelection('web')"> Web</button>
+            <button class="btn" onclick="filterSelection('matlab')"> MATLAB</button>
+          </div>
+         
+        <div class="portfolio-heading">
+          <h1 class="my-heading text-center">Portfolio</h1>
+        </div>
+        
+        <div class="portfolio-content">
+            <div class="container">
+          
+            <div class="my-row">
+
+            <!-- Encylopedia Assignment -->
+            <div class="filterDiv web">
+            <div class="my-col">
+              <div class="my-card port-card">
+                <div class="image">
+                  <a href="/final_project/HTML/project_pages/encyclopedia.html"><img src="/final_project/Images/web_cover.png" alt="Picture from the Encylopedia assignment of the Battle of Isla Cruces section" /></a>
+                </div>
+                <a href="/final_project/HTML/project_pages/encyclopedia.html"><h3 class="greet-heading blue-text">Encylopedia</h3></a>
+                <p class="small-para blue-text">Web Design</p>
+                </div>
+                </div>
+            </div>
+
+            <!-- Portal Simulation Project -->
+            <div class="filterDiv unity">
+            <div class="my-col">
+              <div class="my-card port-card">
+                <div class="image">
+                  <a href="/final_project/HTML/project_pages/portals.html"><img src="/final_project/Images/unity_cover.png" alt="Picture of a 3D model of a dungeon-esk room"/></a>
+                </div>
+                <a href="/final_project/HTML/project_pages/portals.html"><h3 class="greet-heading blue-text">Portal Simulations</h3></a>
+                <p class="small-para blue-text">Unity/C#</p>
+                </div>
+                </div>
+            </div>
+
+            <!-- Satellite Project -->
+            <div class="filterDiv matlab">
+            <div class="my-col">
+              <div class="my-card port-card matlab">
+                <div class="image">
+                  <a href="/final_project/HTML/project_pages/satellite_tracking.html"><img src="/final_project/Images/matlab_cover.png" alt="3D model of the orbit of the ISS station and the Hubble Telescope compared to Earth" /></a>
+                </div>
+                <a href="/final_project/HTML/project_pages/satellite_tracking.html"><h3 class="greet-heading blue-text">Satellite Tracking</h3></a>
+                <p class="small-para blue-text">MATLAB</p>
+              </div>
+              </div>
+            </div>
+            
+            <!-- TRINITY Project -->
+            <div class="filterDiv unity">
+              <div class="my-col">
+                <div class="my-card port-card">
+                  <div class="image">
+                    <a href="/final_project/HTML/project_pages/trinity.html"><img src="/final_project/Images/trinitypic.avif" alt="Picture of someone running through a Rover simulation" /></a>
+                  </div>
+                  <a href="/final_project/HTML/project_pages/trinity.html"><h3 class="greet-heading blue-text">TRINITY</h3></a>
+                  <p class="small-para blue-text">Unity/C#</p>
+                  </div>
+                  </div>
+              </div>
+
+              <!-- Colorado Symphony Website -->
+              <div class="filterDiv web">
+                <div class="my-col">
+                  <div class="my-card port-card">
+                    <div class="image">
+                      <a href="/final_project/HTML/project_pages/symphony.html"><img src="/final_project/Images/symphony.png" alt="Picture of the FAQ page of the re-designed Colorado Symphony Website" /></a>
+                    </div>
+                    <a href="/final_project/HTML/project_pages/symphony.html"><h3 class="greet-heading blue-text">Colorado Symphony Website</h3></a>
+                    <p class="small-para blue-text">Web Design</p>
+                    </div>
+                    </div>
+                </div>
+
+              <!-- G-Force Pilot Model -->
+              <div class="filterDiv matlab">
+                <div class="my-col">
+                  <div class="my-card port-card">
+                    <div class="image">
+                      <a href="/final_project/HTML/project_pages/pilot.html"><img src="/final_project/Images/pilot_simulation.png" alt="Picture of a model of a roller-coaster track designed to mimick flight conditions for pilots" /></a>
+                    </div>
+                    <a href="/final_project/HTML/project_pages/pilot.html"><h3 class="greet-heading blue-text">G-Force Pilot Model</h3></a>
+                    <p class="small-para blue-text">MATLAB</p>
+                    </div>
+                    </div>
+                </div>
+          </div>
+          
+          </div>
+        </div>
+        </div>
+      </section>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="footer-content text-center">
+          <div class="social-links">
+            <div class="footer-menu">
+              <ul class="footer-menu-list">
+                <li class="footer-list-items">
+                  <a class="footer-links" href="https://www.linkedin.com/in/stella-cross-843b14216/">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+      integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/final_project/JS/script.js"></script>
+    <script src="/final_project/JS/filter.js"></script>
+    </body>
+    

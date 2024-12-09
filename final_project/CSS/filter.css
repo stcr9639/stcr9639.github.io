@@ -1,0 +1,39 @@
+/* Style the buttons */
+
+.filterDiv {
+    opacity: 0;
+    transform: scale(0.95); /* Slightly shrink items when hidden */
+    transition: all 0.3s ease-in-out; /* Smooth animation */
+    display: none; /* Hidden by default */
+}
+
+.filterDiv.show {
+    opacity: 1;
+    transform: scale(1); /* Return to full size when visible */
+    display: block; /* Add items back to the grid */
+}
+
+.filterDiv.hide {
+    opacity: 0;
+    transform: scale(0.95); /* Shrink items smoothly */
+    display: none !important; /* Fully remove from grid after animation */
+}
+  
+#myBtnContainer {
+    margin-top: 50px; /* Adds space above the buttons */
+    padding: 10px;    /* Adds space inside the container */
+}
+
+.btn:hover {
+    background-color: #00b4d8;
+}
+  
+.btn.active {
+    background-color: #fff;
+    color: #00b4d8;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}

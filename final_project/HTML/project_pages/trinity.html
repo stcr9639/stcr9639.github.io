@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRINITY Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/final_project/CSS/style.css"/>
+    <link rel="stylesheet" href="/final_project/CSS/responsive.css"/>
+    <link rel="stylesheet" href="/final_project/CSS/carousel.css"/>
+  </head>
+
+  <body>
+    <!-- Navbar header section -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <h2 class="logo-heading">Stella Cross</h2>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars hamburger-icon"></i>
+          <i class="fas fa-times cross-icon"></i>
+        </div>
+        <div class="menu">
+          <ul class="menu-list">
+            <li class="menu-list-items">
+              <a class="links" href="/final_project/HTML/main.html"> Home </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="/final_project/HTML/portfolio.html">
+                Portfolio
+              </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="#about"> About </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="#contact"> Contact Me </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <p><br /><br /><br /></p>
+    <h1>TRINITY</h1>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img
+          src="/final_project/Images/trinitypic.avif"
+          style="width: 100%"
+        />
+        <div class="text">Top of the encyclopedia page</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="/final_project/Images/headcap.jpg" style="width: 100%" />
+        <div class="text">Middle of encyclopedia page</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="/final_project/Images/cockpit.avif" style="width: 100%" />
+        <div class="text">Original Wikipedia page</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <!-- Footer section -->
+    <footer class="footer">
+      <div class="footer-content text-center">
+        <div class="social-links">
+          <div class="footer-menu">
+            <ul class="footer-menu-list">
+              <li class="footer-list-items">
+                <a
+                  class="footer-links"
+                  href="https://www.linkedin.com/in/stella-cross-843b14216/"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+      integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/final_project/JS/script.js"></script>
+    <script src="/final_project/JS/carousel.js"></script>
+  </body>
+</html>

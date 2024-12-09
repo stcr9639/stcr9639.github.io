@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/final_project/CSS/style.css"/>
+    <link rel="stylesheet" href="/final_project/CSS/responsive.css"/>
+  </head>
+
+  <body>
+    <!-- Navbar header section -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <h2 class="logo-heading">Stella Cross</h2>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars hamburger-icon"></i>
+          <i class="fas fa-times cross-icon"></i>
+        </div>
+        <div class="menu">
+          <ul class="menu-list">
+            <li class="menu-list-items">
+              <a class="links" href="/final_project/HTML/main.html"> Home </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="/final_project/HTML/portfolio.html"> Portfolio </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="#about"> About </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="#contact"> Contact Me </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main hero banner -->
+    <section id="home" class="hero">
+      <div class="intro">
+        <div class="headings">
+          <h3 class="greet-heading">Hello, I'm</h3>
+          <h1 class="my-heading">Stella Cross</h1>
+          <h4 class="sub-heading">A 4th year Aerospace Engineering student</h4>
+        </div>
+        <div class="intro-buttons">
+          <a href="#about"><button class="btn common-btn">About Me</button></a>
+          <a href="/final_project/Cross_Resume.pdf"><button class="btn ghost-btn">Get Resume</button></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio-heading">
+        <h1 class="my-heading text-center">Featured Portfolio</h1>
+      </div>
+      <div class="portfolio-content">
+        <div class="my-row">
+          <!-- Encylopedia Assignment -->
+          <div class="my-col">
+            <div class="my-card port-card">
+              <div class="image">
+                <a href="/final_project/HTML/project_pages/encyclopedia.html"><img src="/final_project/Images/web_cover.png" alt="Picture from the Encylopedia assignment of the Battle of Isla Cruces section" /></a>
+              </div>
+              <a href="/final_project/HTML/project_pages/encyclopedia.html class="greet-heading blue-text">Encylopedia</h3></a>
+              <p class="small-para blue-text">Web Design</p>
+            </div>
+          </div>
+
+          <!-- Portals Project -->
+          <div class="my-col">
+            <div class="my-card port-card">
+              <div class="image">
+                <a href="/final_project/HTML/project_pages/portals.html"><img src="/final_project/Images/unity_cover.png" alt="Web Development Image"/></a>
+              </div>
+              <a href="/final_project/HTML/project_pages/portals.html"><h3 class="greet-heading blue-text">Portal Simulations</h3></a>
+              <p class="small-para blue-text">Unity/C#</p>
+            </div>
+          </div>
+
+          <!-- Satellite Tracking Project -->
+          <div class="my-col">
+            <div class="my-card port-card">
+              <div class="image">
+                <a href="/final_project/HTML/project_pages/satellite_tracking.html"><img src="/final_project/Images/matlab_cover.png" alt="3D model of the orbit of the ISS station and the Hubble Telescope compared to Earth"/></a>
+              </div>
+              <a href="/final_project/HTML/project_pages/satellite_tracking.html"><h3 class="greet-heading blue-text">Satellite Tracking</h3></a>
+              <p class="small-para blue-text">MATLAB</p>
+            </div>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="about-text">
+        <h1 class="my-heading">About Me</h1>
+        <p class="lead-para">
+          Hello! My name is Stella Cross. I'm a fourth year student at CU Boulder. 
+          I have a double major in aerospace engineering and chemistry with a minor in creative technology & design. I'm interested in 
+          bioastronautics and supporting the next generation of astronauts. I worked in a VR research lab for a year and half and helped to 
+          link Unity to LabRecorder so that the start of each trial could be linked to a time stamp. I've done work in lab courses modeling and
+          analysis for various aerospace situations. 
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="/final_project/Images/Aquarium.png" alt="About Image" />
+      </div>
+    </section>
+
+
+    <!-- Contact me section -->
+    <section class="contact" id="contact">
+      <div class="contact-heading">
+        <h1 class="my-heading text-center">Contact Me</h1>
+      </div>
+      <div class="contact-content">
+        <div class="contact-form-container">
+          <h1 class="greet-heading">Get In Touch</h1>
+          <form class="contact-form">
+            <input class="form-controls" type="text" placeholder="Your Name" />
+            <input class="form-controls" type="text" placeholder="Your Email" />
+            <input class="form-controls" type="text" placeholder="Your Phone" />
+            <textarea
+              class="form-controls"
+              placeholder="Write your message"
+              name="message"
+              id=""
+              cols="30"
+              rows="10"
+            >
+            </textarea>
+            <input
+              class="form-btn btn common-btn"
+              type="submit"
+              value="Send Message"
+            />
+          </form>
+        </div>
+        <div class="contact-details">
+          <h1 class="greet-heading">My Contact Details</h1>
+          <div class="details">
+            <h5 class="contact-heading">EMAIL</h5>
+            <p class="contact-text">stcr9639@colorado.edu</p>
+          </div>
+          <div class="details">
+            <h5 class="contact-heading">PHONE</h5>
+            <p class="contact-text">+1 (425)324-7721</p>
+          </div>
+          <div class="details">
+            <h5 class="contact-heading">ADDRESS</h5>
+            <p class="contact-text">Boulder, CO</p>
+            <p>University of Colorado Boulder</p>
+            <p>584 UCB, 80309-0584</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer">
+      <div class="footer-content text-center">
+        <div class="social-links">
+          <div class="footer-menu">
+            <ul class="footer-menu-list">
+              <li class="footer-list-items">
+                <a class="footer-links" href="https://www.linkedin.com/in/stella-cross-843b14216/">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+      integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/final_project/JS/script.js"></script>
+  </body>
+</html>
