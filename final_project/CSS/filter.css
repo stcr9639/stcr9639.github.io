@@ -1,5 +1,7 @@
-/* Style the buttons */
+/* Styles defined for the desktop or the bigger screen devices*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* Style the buttons */
 .filterDiv {
     opacity: 0;
     transform: scale(0.95); /* Slightly shrink items when hidden */
@@ -34,6 +36,6 @@
 }
 
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
+body {font-family: 'Poppins', sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}

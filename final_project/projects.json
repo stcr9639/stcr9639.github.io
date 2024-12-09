@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Encylopedia",
+        "description": "A simple project using HTML and CSS.",
+        "technologies": ["HTML"],
+        "images": ["assets/images/project1/img1.jpg", "assets/images/project1/img2.jpg"]
+    },
+    {
+        "id": 2,
+        "title": "G-Force Pilot Model",
+        "description": "An interactive project with JavaScript.",
+        "technologies": ["MATLAB"],
+        "images": ["assets/images/project2/img1.jpg", "assets/images/project2/img2.jpg"]
+    },
+    {
+        "id": 3,
+        "title": "Portals Interactivity",
+        "description": "A full-stack project.",
+        "technologies": ["Unity", "C#"],
+        "images": ["assets/images/project3/img1.jpg", "assets/images/project3/img2.jpg"]
+    },
+    {
+        "id": 4,
+        "title": "Satellite Tracking",
+        "description": "A full-stack project.",
+        "technologies": ["MATLAB"],
+        "images": ["assets/images/project3/img1.jpg", "assets/images/project3/img2.jpg"]
+    },
+    {
+        "id": 5,
+        "title": "Symphony Website",
+        "description": "A full-stack project.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "images": ["assets/images/project3/img1.jpg", "assets/images/project3/img2.jpg"]
+    },
+    {
+        "id": 6,
+        "title": "TRINITY",
+        "description": "A full-stack project.",
+        "technologies": ["Unity", "C#"],
+        "images": ["assets/images/project3/img1.jpg", "assets/images/project3/img2.jpg"]
+    }
+]

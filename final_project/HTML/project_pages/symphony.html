@@ -11,8 +11,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="/final_project/style.css" />
-    <link rel="stylesheet" href="/final_project/responsive.css" />
+    <link rel="stylesheet" href="/final_project/CSS/style.css"/>
+    <link rel="stylesheet" href="/final_project/CSS/responsive.css"/>
+    <link rel="stylesheet" href="/final_project/CSS/carousel.css"/>
   </head>
 
   <body>
@@ -29,21 +30,56 @@
         <div class="menu">
           <ul class="menu-list">
             <li class="menu-list-items">
-              <a class="links" href="/final_project/main.html"> Home </a>
+              <a class="links" href="/final_project/HTML/main.html"> Home </a>
             </li>
             <li class="menu-list-items">
-              <a class="links" href="/final_project/portfolio.html"> Portfolio </a>
+              <a class="links" href="/final_project/HTML/portfolio.html"> Portfolio </a>
             </li>
             <li class="menu-list-items">
-              <a class="links" href="#about"> About </a>
+              <a class="links" href="/final_project/HTML/about_me.html"> About Me</a>
             </li>
             <li class="menu-list-items">
-              <a class="links" href="#contact"> Contact Me </a>
+              <a class="links" href="/final_project/HTML/resume.html"> Resume </a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
+
+    <p><br/><br/><br/></p>
+    <div class="portfolio-heading">
+      <h1 class="my-heading text-center">Redesign of the Colorado Symphony</h1>
+    </div>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="/final_project/Images/colorado_symphony.png" style="width: 100%"/>
+        <div class="text">Tracking the Hubble Telescope and ISS in comparison to Earth</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="/final_project/Images/symphony.png" style="width: 100%" />
+        <div class="text">Difference between a Geosynchronous Orbit and a Low-Earth Orbit</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="/final_project/Images/faq_page.png" style="width: 100%" />
+        <div class="text">Animation of the Orbits</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
 
   <!-- Footer section -->
   <footer class="footer">
@@ -68,6 +104,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
-  <script src="/final_project/script.js"></script>
+  <script src="/final_project/JS/script.js"></script>
+  <script src="/final_project/JS/carousel.js"></script>
 </body>
 </html>
