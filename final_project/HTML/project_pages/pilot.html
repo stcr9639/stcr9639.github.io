@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="/final_project/CSS/style.css" />
     <link rel="stylesheet" href="/final_project/CSS/responsive.css" />
     <link rel="stylesheet" href="/final_project/CSS/carousel.css" />
+    <style>
+      p.ex1 {
+        padding-left: 50px;
+      }
+      </style>
   </head>
 
   <body>
@@ -57,19 +62,19 @@
       <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
         <img src="/final_project/Images/pilot_simulation.png" style="width: 100%" />
-        <div class="text">Top of the encyclopedia page</div>
+        <div class="text">Full Assembled Roll Coaster Model</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
         <img src="/final_project/Images/gravity_graphs.png" style="width: 100%" />
-        <div class="text">Middle of encyclopedia page</div>
+        <div class="text">G-Forces experience over the rollercoaster and which sections contribute</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">3 / 3</div>
         <img src="/final_project/Images/loop_geometry.png" style="width: 100%" />
-        <div class="text">Original Wikipedia page</div>
+        <div class="text">The geometry of the zero-g loop</div>
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -82,6 +87,18 @@
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
     </div>
+
+    <p class="ex1">
+      <h2>Abstract</h2>
+      Real world pilot training can be an expensive and dangerous endeavor. Through advances in virtual reality technology, 
+      it has become possible to pair the physical effects of real world roller coasters with imaginary virtual worlds. In doing 
+      so, we can create a realistic simulated experience at a low cost. We have been tasked with completing a preliminary design 
+      for a roller coaster flight simulator to be used for pilot training. To do this, we used Matlab to create re-configurable 
+      coaster sections that would be analogous to specific flight situations. Using dynamics equations, we also were able to 
+      derive equations for the velocities and accelerations throughout the track elements. This gives us the ability to precisely 
+      calculate the g's that a pilot in the simulator would experience in flight, and create a virtual environment to match that 
+      experience.
+    </p>
 
     <!-- Footer section -->
     <footer class="footer">
@@ -111,5 +128,46 @@
     ></script>
     <script src="/final_project/JS/script.js"></script>
     <script src="/final_project/JS/carousel.js"></script>
+    <script>
+      // Load the JSON file
+      fetch('/path/to/projects.json') // Update with the correct path to projects.json
+        .then(response => response.json())
+        .then(data => {
+          // Find the project with the title "G-Force Pilot Model"
+          const pilot = data.find(project => project.title === "G-Force Pilot Model");
+    
+          if (pilot) {
+            // Update the page content dynamically
+            document.querySelector(".portfolio-heading h1").innerText = pilot.title;
+    
+            const slideshowContainer = document.querySelector(".slideshow-container");
+            slideshowContainer.innerHTML = ""; // Clear existing content
+    
+            // Add images from the JSON
+            pilot.images.forEach((image, index) => {
+              const slideDiv = document.createElement("div");
+              slideDiv.className = "mySlides fade";
+              slideDiv.innerHTML = `
+                <div class="numbertext">${index + 1} / ${pilot.images.length}</div>
+                <img src="${image}" style="width: 100%" />
+                <div class="text">${pilot.description}</div>
+              `;
+              slideshowContainer.appendChild(slideDiv);
+            });
+    
+            // Add navigation dots
+            const dotsContainer = document.createElement("div");
+            dotsContainer.style.textAlign = "center";
+            pilot.images.forEach((_, index) => {
+              const dot = document.createElement("span");
+              dot.className = "dot";
+              dot.setAttribute("onclick", `currentSlide(${index + 1})`);
+              dotsContainer.appendChild(dot);
+            });
+            slideshowContainer.parentElement.appendChild(dotsContainer);
+          }
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+    </script>    
   </body>
 </html>

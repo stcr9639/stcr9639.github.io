@@ -55,19 +55,19 @@
       <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
         <img src="/final_project/Images/colorado_symphony.png" style="width: 100%"/>
-        <div class="text">Tracking the Hubble Telescope and ISS in comparison to Earth</div>
+        <div class="text">Main home page of the website</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
         <img src="/final_project/Images/symphony.png" style="width: 100%" />
-        <div class="text">Difference between a Geosynchronous Orbit and a Low-Earth Orbit</div>
+        <div class="text">FAQ page that I designed collapsed</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">3 / 3</div>
         <img src="/final_project/Images/faq_page.png" style="width: 100%" />
-        <div class="text">Animation of the Orbits</div>
+        <div class="text">FAQ page that I designed expanded</div>
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -80,6 +80,11 @@
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
     </div>
+
+  <h2>Summary of Prompt</h2>
+  <p>
+    In this class project, you have been assigned an exciting new client: the Colorado Symphony Orchestra. n this assignment, you will work with a team to put this content together into a multi-page, aesthetically pleasing, functional website.
+  </p>
 
   <!-- Footer section -->
   <footer class="footer">
@@ -106,5 +111,46 @@
   ></script>
   <script src="/final_project/JS/script.js"></script>
   <script src="/final_project/JS/carousel.js"></script>
+  <script>
+    // Load the JSON file
+    fetch('/path/to/projects.json') // Update with the correct path to projects.json
+      .then(response => response.json())
+      .then(data => {
+        // Find the project with the title "Symphony Website"
+        const symphonyProject = data.find(project => project.title === "Symphony Website");
+  
+        if (symphonyProject) {
+          // Update the page content dynamically
+          document.querySelector(".portfolio-heading h1").innerText = symphonyProject.title;
+  
+          const slideshowContainer = document.querySelector(".slideshow-container");
+          slideshowContainer.innerHTML = ""; // Clear existing content
+  
+          // Add images from the JSON
+          symphonyProject.images.forEach((image, index) => {
+            const slideDiv = document.createElement("div");
+            slideDiv.className = "mySlides fade";
+            slideDiv.innerHTML = `
+              <div class="numbertext">${index + 1} / ${symphonyProject.images.length}</div>
+              <img src="${image}" style="width: 100%" />
+              <div class="text">${symphonyProject.description}</div>
+            `;
+            slideshowContainer.appendChild(slideDiv);
+          });
+  
+          // Add navigation dots
+          const dotsContainer = document.createElement("div");
+          dotsContainer.style.textAlign = "center";
+          symphonyProject.images.forEach((_, index) => {
+            const dot = document.createElement("span");
+            dot.className = "dot";
+            dot.setAttribute("onclick", `currentSlide(${index + 1})`);
+            dotsContainer.appendChild(dot);
+          });
+          slideshowContainer.parentElement.appendChild(dotsContainer);
+        }
+      })
+      .catch(error => console.error('Error loading JSON:', error));
+  </script>  
 </body>
 </html>

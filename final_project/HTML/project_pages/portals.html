@@ -53,28 +53,46 @@
 
     <div class="slideshow-container">
       <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
+        <div class="numbertext">1 / 5</div>
         <img
           src="/final_project/Images/unity_cover.png"
           style="width: 100%"
         />
-        <div class="text">Top of the encyclopedia page</div>
+        <div class="text">Picture of one of the scenes in the Unity build</div>
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
+        <div class="numbertext">2 / 5</div>
         <video width="1000px" height="807.3px" controls="controls">
           <source src= "/final_project/Video/portal_video.mp4" type="video/mp4"/>
         </video>
-        <div class="text">Middle of encyclopedia page</div>
+        <div class="text">Video of the portal interaction that allows users to walk through a portal</div>
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
+        <div class="numbertext">3 / 5</div>
         <video width="1000px" height="807.3px" controls="controls">
           <source src= "/final_project/Video/house_video.mp4" type="video/mp4"/>
         </video>
-        <div class="text">Original Wikipedia page</div>
+        <div class="text">Video of a scene transition that allows users to "walk into" a house</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img
+          src="/final_project/Images/interactions_like.png"
+          style="width: 100%"
+        />
+        <div class="text">Feedback on interactions participants liked the most</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img
+          src="/final_project/Images/interactions_dislike.png"
+          style="width: 100%"
+        />
+        <div class="text">Feedback on which interactions participants liked the least</div>
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -86,7 +104,19 @@
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
     </div>
+
+    <h2>Final Deliverable</h2>
+    <p>The core interaction implemented was teleportation. Teleportation is described as an element that allows a player to instantly 
+      travel between two locations or levels. In my project teleportation is implemented in the following four different ways: 
+      ray-based teleportation, object-based teleportation, scene changing, and portals. Ray-based teleportation allows a user to point 
+      a ray in the direction they wish to go and it moves the player a few feet forward. This effect was achieved by using the ray-interactors 
+      that are a part of the XR Rig extension. The object-based teleportation allowed a user to touch an object and teleport to a 
+      different location on the map. The scene change allowed for a player to “enter the houses” which was a different scene than the 
+      open terrain scene they started in. The portal allowed for the player to see through the portal using a camera linked to the player's 
+      movements and would allow the player to walk through to another location in the scene. </p>
 
     <!-- Footer section -->
     <footer class="footer">
@@ -116,5 +146,46 @@
     ></script>
     <script src="/final_project/JS/script.js"></script>
     <script src="/final_project/JS/carousel.js"></script>
+    <script>
+      // Load the JSON file
+      fetch('/path/to/projects.json') // Update with the correct path to projects.json
+        .then(response => response.json())
+        .then(data => {
+          // Find the project with the title "Portals Interactivity"
+          const portals = data.find(project => project.title === "Portals Interactivity");
+    
+          if (portals) {
+            // Update the page content dynamically
+            document.querySelector(".portfolio-heading h1").innerText = portals.title;
+    
+            const slideshowContainer = document.querySelector(".slideshow-container");
+            slideshowContainer.innerHTML = ""; // Clear existing content
+    
+            // Add images from the JSON
+            portals.images.forEach((image, index) => {
+              const slideDiv = document.createElement("div");
+              slideDiv.className = "mySlides fade";
+              slideDiv.innerHTML = `
+                <div class="numbertext">${index + 1} / ${portals.images.length}</div>
+                <img src="${image}" style="width: 100%" />
+                <div class="text">${portals.description}</div>
+              `;
+              slideshowContainer.appendChild(slideDiv);
+            });
+    
+            // Add navigation dots
+            const dotsContainer = document.createElement("div");
+            dotsContainer.style.textAlign = "center";
+            portals.images.forEach((_, index) => {
+              const dot = document.createElement("span");
+              dot.className = "dot";
+              dot.setAttribute("onclick", `currentSlide(${index + 1})`);
+              dotsContainer.appendChild(dot);
+            });
+            slideshowContainer.parentElement.appendChild(dotsContainer);
+          }
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+    </script>    
   </body>
 </html>

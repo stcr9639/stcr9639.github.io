@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="/final_project/CSS/style.css"/>
     <link rel="stylesheet" href="/final_project/CSS/responsive.css"/>
     <link rel="stylesheet" href="/final_project/CSS/carousel.css"/>
+    <style>
+      p.ex1 {
+        padding-left: 50px;
+      }
+    </style>
   </head>
 
   <body>
@@ -85,6 +90,12 @@
         <span class="dot" onclick="currentSlide(3)"></span> 
       </div>
 
+    <p class="ex1">
+      <h2> Assignment Instructions</h2>
+      This week, you'll be creating an encyclopedia page on your website. Pick something you
+      know well (or want to learn more about) and make a brief encyclopedia page. Not only will you be 
+      creating an encyclopedia page, but you'll also link it to your peers' pages, as appropriate.
+    </p>
 
     <!-- Footer section -->
     <footer class="footer">
@@ -114,5 +125,46 @@
     </script>
     <script src="/final_project/JS/script.js"></script>
     <script src="/final_project/JS/carousel.js"></script>
+    <script>
+      // Load the JSON file
+      fetch('/path/to/projects.json') // Update with the correct path to projects.json
+        .then(response => response.json())
+        .then(data => {
+          // Find the project with the title "Encylopedi"
+          const encyclopedia = data.find(project => project.title === "Encylopedi");
+    
+          if (encyclopedia) {
+            // Update the page content dynamically
+            document.querySelector(".portfolio-heading h1").innerText = encyclopedia.title;
+    
+            const slideshowContainer = document.querySelector(".slideshow-container");
+            slideshowContainer.innerHTML = ""; // Clear existing content
+    
+            // Add images from the JSON
+            encyclopedia.images.forEach((image, index) => {
+              const slideDiv = document.createElement("div");
+              slideDiv.className = "mySlides fade";
+              slideDiv.innerHTML = `
+                <div class="numbertext">${index + 1} / ${encyclopedia.images.length}</div>
+                <img src="${image}" style="width: 100%" />
+                <div class="text">${encyclopedia.description}</div>
+              `;
+              slideshowContainer.appendChild(slideDiv);
+            });
+    
+            // Add navigation dots
+            const dotsContainer = document.createElement("div");
+            dotsContainer.style.textAlign = "center";
+            encyclopedia.images.forEach((_, index) => {
+              const dot = document.createElement("span");
+              dot.className = "dot";
+              dot.setAttribute("onclick", `currentSlide(${index + 1})`);
+              dotsContainer.appendChild(dot);
+            });
+            slideshowContainer.parentElement.appendChild(dotsContainer);
+          }
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+    </script>    
   </body>
 </html>

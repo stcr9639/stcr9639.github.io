@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="/final_project/CSS/style.css"/>
     <link rel="stylesheet" href="/final_project/CSS/responsive.css"/>
     <link rel="stylesheet" href="/final_project/CSS/carousel.css"/>
+    <style>
+      p.ex1 {
+        padding-left: 50px;
+      }
+    </style>
   </head>
 
   <body>
@@ -60,19 +65,19 @@
           src="/final_project/Images/trinitypic.avif"
           style="width: 100%"
         />
-        <div class="text">Top of the encyclopedia page</div>
+        <div class="text">Picture of a subject driving the rover in the simulation within the physical mock-up</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
         <img src="/final_project/Images/headcap.jpg" style="width: 100%" />
-        <div class="text">Middle of encyclopedia page</div>
+        <div class="text">Picture of a test run of attaching the EEG cap to a participants head for brain scans while testing</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">3 / 3</div>
         <img src="/final_project/Images/cockpit.avif" style="width: 100%" />
-        <div class="text">Original Wikipedia page</div>
+        <div class="text">Picture of the physical mock-up for the Entry, Descent, and Landing simulation</div>
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -85,6 +90,16 @@
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
     </div>
+
+    <h2>Aims of the Project</h2>
+    <p class="ex1">
+      <li>Aim1: Develop a LDEM-specific, multi-environment virtual training simulator.</li>
+      <li>Aim 2: Quantify brain activation during training to assess the environment's 
+        efficacy as a countermeasure to neural decrements in spaceflight.</li>
+      <li>Aim 3: Investigate use of the virtual training environment for performance maintenance.</li>
+      <li>Aim 4: Demonstrate long-term acceptability, engagement, and skills transfer 
+        in an isolated, confined, controlled environment (ICC).</li>
+    </p>
 
     <!-- Footer section -->
     <footer class="footer">
@@ -114,5 +129,47 @@
     ></script>
     <script src="/final_project/JS/script.js"></script>
     <script src="/final_project/JS/carousel.js"></script>
+    <script>
+      // Load the JSON file
+      fetch('/path/to/projects.json') // Update with the correct path to projects.json
+        .then(response => response.json())
+        .then(data => {
+          // Find the project with the title "Symphony Website"
+          const trinity = data.find(project => project.title === "TRINITY");
+    
+          if (trinity) {
+            // Update the page content dynamically
+            document.querySelector(".portfolio-heading h1").innerText = trinity.title;
+    
+            const slideshowContainer = document.querySelector(".slideshow-container");
+            slideshowContainer.innerHTML = ""; // Clear existing content
+    
+            // Add images from the JSON
+            trinityt.images.forEach((image, index) => {
+              const slideDiv = document.createElement("div");
+              slideDiv.className = "mySlides fade";
+              slideDiv.innerHTML = `
+                <div class="numbertext">${index + 1} / ${trinity.images.length}</div>
+                <img src="${image}" style="width: 100%" />
+                <div class="text">${trinity.description}</div>
+              `;
+              slideshowContainer.appendChild(slideDiv);
+            });
+    
+            // Add navigation dots
+            const dotsContainer = document.createElement("div");
+            dotsContainer.style.textAlign = "center";
+            trinity.images.forEach((_, index) => {
+              const dot = document.createElement("span");
+              dot.className = "dot";
+              dot.setAttribute("onclick", `currentSlide(${index + 1})`);
+              dotsContainer.appendChild(dot);
+            });
+            slideshowContainer.parentElement.appendChild(dotsContainer);
+          }
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+    </script>
+    
   </body>
 </html>
