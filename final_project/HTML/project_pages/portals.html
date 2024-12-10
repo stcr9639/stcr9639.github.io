@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="/final_project/CSS/style.css"/>
     <link rel="stylesheet" href="/final_project/CSS/responsive.css"/>
     <link rel="stylesheet" href="/final_project/CSS/carousel.css"/>
+    <style>
+      p.ex1 {
+        padding-left: 50px;
+      }
+    </style>
   </head>
 
   <body>
@@ -54,17 +59,14 @@
     <div class="slideshow-container">
       <div class="mySlides fade">
         <div class="numbertext">1 / 5</div>
-        <img
-          src="/final_project/Images/unity_cover.png"
-          style="width: 100%"
-        />
+        <img src="/final_project/Images/unity_cover.png" style="width: 100%" alt="Picture of a dungeon-esk room"/>
         <div class="text">Picture of one of the scenes in the Unity build</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">2 / 5</div>
         <video width="1000px" height="807.3px" controls="controls">
-          <source src= "/final_project/Video/portal_video.mp4" type="video/mp4"/>
+          <source src= "/final_project/Video/portal_video.mp4" type="video/mp4" alt="Video of a portal interaction. The user walks through the portal into a different area of the map"/>
         </video>
         <div class="text">Video of the portal interaction that allows users to walk through a portal</div>
       </div>
@@ -72,26 +74,20 @@
       <div class="mySlides fade">
         <div class="numbertext">3 / 5</div>
         <video width="1000px" height="807.3px" controls="controls">
-          <source src= "/final_project/Video/house_video.mp4" type="video/mp4"/>
+          <source src= "/final_project/Video/house_video.mp4" type="video/mp4" alt="Video shows the user approaching a house and being 'teleported' into the dungeon scene shown in the first image"/>
         </video>
         <div class="text">Video of a scene transition that allows users to "walk into" a house</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">4 / 5</div>
-        <img
-          src="/final_project/Images/interactions_like.png"
-          style="width: 100%"
-        />
+        <img src="/final_project/Images/interactions_like.png" style="width: 100%" alt="Image of a pie-chart of participant responses"/>
         <div class="text">Feedback on interactions participants liked the most</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">5 / 5</div>
-        <img
-          src="/final_project/Images/interactions_dislike.png"
-          style="width: 100%"
-        />
+        <img src="/final_project/Images/interactions_dislike.png" style="width: 100%" alt="Image of a pie-chart of participant responses"/>
         <div class="text">Feedback on which interactions participants liked the least</div>
       </div>
 
@@ -109,7 +105,7 @@
     </div>
 
     <h2>Final Deliverable</h2>
-    <p>The core interaction implemented was teleportation. Teleportation is described as an element that allows a player to instantly 
+    <p class ="ex1">The core interaction implemented was teleportation. Teleportation is described as an element that allows a player to instantly 
       travel between two locations or levels. In my project teleportation is implemented in the following four different ways: 
       ray-based teleportation, object-based teleportation, scene changing, and portals. Ray-based teleportation allows a user to point 
       a ray in the direction they wish to go and it moves the player a few feet forward. This effect was achieved by using the ray-interactors 
